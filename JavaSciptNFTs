@@ -1,0 +1,49 @@
+// Create an array to store your NFTs
+let nfts = [];
+
+// Function to create and store a new NFT
+function mintNFT(name, artist, description, dateCreated) {
+    // Create an object with the NFT's details
+    const nft = {
+        name: name,
+        artist: artist,
+        description: description,
+        dateCreated: dateCreated
+    };
+    
+    // Add the NFT object to the array
+    nfts.push(nft);
+}
+
+// Function to print all the NFTs' details to the console
+function listNFTs() {
+    // Loop through the array of NFTs
+    nfts.forEach((nft, index) => {
+        console.log(`NFT ${index + 1}:`);
+        console.log(`  Name: ${nft.name}`);
+        console.log(`  Artist: ${nft.artist}`);
+        console.log(`  Description: ${nft.description}`);
+        console.log(`  Date Created: ${nft.dateCreated}`);
+        console.log('-------------------------');
+    });
+}
+
+// Function to print the total number of NFTs created
+function getTotalSupply() {
+    // Return the length of the nfts array
+    return nfts.length;
+}
+
+// Mint (create) at least three NFTs
+mintNFT("CryptoPunk #1", "Aarav Sharma", "A unique CryptoPunk NFT", "2024-05-28");
+mintNFT("CryptoKitty #2", "Anaya Singh", "A cute CryptoKitty NFT", "2024-05-29");
+mintNFT("Digital Art #3", "Vihaan Patel", "A stunning piece of digital art", "2024-05-30");
+
+// Print all the NFTs' details to the console
+listNFTs();
+
+// Print the total number of NFTs created to the console
+console.log(`Total Supply: ${getTotalSupply()}`);
+
+
+#code BY SHIVKANT ARYA (22BCS16247)
